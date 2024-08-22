@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAMIKA</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #3e2723;
+            text-align: center;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        .header img {
+            max-width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+
+        .header .button-container {
+            margin: 20px 0;
+        }
+
+        .header .button-container a,
+        .header .button-container button {
+            padding: 15px 30px;
+            background-color: #ffd54f;
+            color: #3e2723;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            margin: 10px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .header .button-container a:hover,
+        .header .button-container button:hover {
+            background-color: #ad691a;
+            transform: translateY(-5px);
+        }
+
+        .social-working {
+            font-size: 1.8rem;
+            font-family: 'Courier New', Courier, monospace;
+            line-height: 2rem;
+            margin: 80px;
+            color: #3e2723;
+        }
+
+        .quote {
+            font-size: 1.2rem;
+            font-family: 'Georgia', serif;
+            margin: 20px;
+            color: #3e2723;
+            font-style: italic;
+        }
+
+        .author {
+            font-size: 1rem;
+            font-family: 'Georgia', serif;
+            margin: 10px;
+            color: #3e2723;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .modal-content a {
+            display: block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #ffd54f;
+            color: #3e2723;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .modal-content a:hover {
+            background-color: #ad691a;
+            transform: translateY(-5px);
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Halaman Pertama -->
+    <div class="header">
+        <!-- Logo Image -->
+        <img src="c:\Users\pc\Pictures\logo.png" alt="Logo Cafe">
+
+        <!-- Button Container -->
+        <div class="button-container">
+            <a href="menu.html">Main Menu</a>
+            <button onclick="showReservationOptions()">Reservation</button>
+        </div>
+
+        <!-- Social Working Creative Space -->
+        <p class="social-working">
+            SOCIAL <br>
+            WORKING <br>
+            CREATIVE <br>
+            SPACE
+        </p>
+
+        <!-- Quote and Author -->
+        <p class="quote">
+            "Creativity is inventing, experimenting, <br>
+            growing, taking risks, breaking rules, <br>
+            making mistakes, and having fun."
+        </p>
+        <p class="author">
+            - Mary Lou Cook
+        </p>
+    </div>
+
+    <!-- Modal for Reservation Options -->
+    <div id="reservation-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeReservationOptions()">&times;</span>
+            <a href="https://wa.me/+6289603102466" target="_blank">Contact via WhatsApp</a>
+            <a href="https://www.instagram.com/mamika.coffee?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Contact via Instagram</a>
+        </div>
+    </div>
+
+    <script>
+        function showReservationOptions() {
+            document.getElementById('reservation-modal').style.display = 'flex';
+        }
+
+        function closeReservationOptions() {
+            document.getElementById('reservation-modal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Cafe Cozy</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3e5d0;
+            color: #3e2723;
+        }
+
+        .menu-section {
+            padding: 60px 20px;
+            background-color: #efebe9;
+        }
+
+        .menu-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #5d4037;
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-item img {
+            max-width: 120px;
+            border-radius: 10px;
+            margin-right: 20px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-item h3 {
+            margin: 0;
+            font-size: 1.8rem;
+            color: #3e2723;
+        }
+
+        .menu-item p {
+            margin: 5px 0;
+            font-size: 1.2rem;
+            color: #795548;
+        }
+
+        .footer {
+            padding: 20px;
+            background-color: #5d4037;
+            color: #fff;
+            text-align: center;
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        /* Responsif untuk tampilan mobile */
+        @media (max-width: 768px) {
+            .menu-item {
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: left;
+            }
+
+            .menu-item img {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Halaman Menu -->
+    <div class="menu-section">
+        <h2>Menu Kami</h2>
+
+        <div class="menu-item">
+            <img src="menu1.jpg" alt="Menu 1">
+            <div>
+                <h3>Cappuccino</h3>
+                <p>Rp 25.000</p>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <img src="menu2.jpg" alt="Menu 2">
+            <div>
+                <h3>Croissant</h3>
+                <p>Rp 15.000</p>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <img src="menu3.jpg" alt="Menu 3">
+            <div>
+                <h3>Sandwich</h3>
+                <p>Rp 30.000</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 Cafe Cozy - Semua Hak Dilindungi</p>
+    </div>
+</body>
+</html>
