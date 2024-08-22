@@ -3,117 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Cafe Cozy</title>
+    <title>Menu MAMIKA</title>
+
+    <!-- Lightbox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+
     <style>
         body {
             font-family: 'Georgia', serif;
             margin: 0;
             padding: 0;
-            background-color: #f3e5d0;
+            background-color: #ffffff;
             color: #3e2723;
+            text-align: center;
         }
 
         .menu-section {
             padding: 60px 20px;
-            background-color: #efebe9;
+            background-color: #ffffff;
+            color: #000000;
         }
 
         .menu-section h2 {
-            text-align: center;
             font-size: 2.5rem;
-            margin-bottom: 40px;
+            margin-bottom: 10px;
             color: #5d4037;
         }
 
-        .menu-item {
-            display: flex;
-            align-items: center;
-            background-color: #fff;
-            margin-bottom: 30px;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .menu-item img {
-            max-width: 120px;
-            border-radius: 10px;
-            margin-right: 20px;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .menu-item h3 {
-            margin: 0;
-            font-size: 1.8rem;
-            color: #3e2723;
-        }
-
-        .menu-item p {
-            margin: 5px 0;
-            font-size: 1.2rem;
+        .menu-section p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
             color: #795548;
         }
 
-        .footer {
-            padding: 20px;
-            background-color: #5d4037;
-            color: #fff;
+        .menu-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .menu-item {
+            width: 80%;
+            max-width: 400px;
+            margin-bottom: 30px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .menu-item:hover {
+            transform: scale(1.02);
+        }
+
+        .menu-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .button-container a,
+        .button-container button {
+            padding: 15px 30px;
+            background-color: #ffd54f;
+            color: #3e2723;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            margin: 10px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .button-container a:hover,
+        .button-container button:hover {
+            background-color: #ad691a;
+            transform: translateY(-5px);
+        }
+
+        /* Lightbox Close Button */
+        .lb-close {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            background-color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
             text-align: center;
+            cursor: pointer;
+            z-index: 1001;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        .footer p {
-            margin: 0;
-            font-size: 1rem;
-        }
-
-        /* Responsif untuk tampilan mobile */
-        @media (max-width: 768px) {
-            .menu-item {
-                flex-direction: column;
-                align-items: flex-start;
-                text-align: left;
-            }
-
-            .menu-item img {
-                margin-right: 0;
-                margin-bottom: 15px;
-            }
+        .lb-close:hover {
+            background-color: #ad691a;
+            color: #fff;
         }
     </style>
 </head>
 <body>
+
     <!-- Halaman Menu -->
     <div class="menu-section">
-        <h2>Menu Kami</h2>
+        <h2>Hii sobat MAMIKA!!!</h2>
+        <p>This is our Menu</p>
 
-        <div class="menu-item">
-            <img src="menu1.jpg" alt="Menu 1">
-            <div>
-                <h3>Cappuccino</h3>
-                <p>Rp 25.000</p>
+        <div class="menu-container">
+            <div class="menu-item">
+                <a href="https://i.pinimg.com/564x/ae/1c/eb/ae1ceb751283f812f4c72b6a990ab8c2.jpg" data-lightbox="menu" data-title="Cappuccino">
+                    <img src="https://i.pinimg.com/564x/ae/1c/eb/ae1ceb751283f812f4c72b6a990ab8c2.jpg" alt="Menu 1">
+                </a>
             </div>
-        </div>
 
-        <div class="menu-item">
-            <img src="menu2.jpg" alt="Menu 2">
-            <div>
-                <h3>Croissant</h3>
-                <p>Rp 15.000</p>
+            <div class="menu-item">
+                <a href="https://i.pinimg.com/564x/28/94/3b/28943be20ddb324a5ed4fc01222ff4e0.jpg" data-lightbox="menu" data-title="Croissant">
+                    <img src="https://i.pinimg.com/564x/28/94/3b/28943be20ddb324a5ed4fc01222ff4e0.jpg" alt="Menu 2">
+                </a>
             </div>
-        </div>
 
-        <div class="menu-item">
-            <img src="menu3.jpg" alt="Menu 3">
-            <div>
-                <h3>Sandwich</h3>
-                <p>Rp 30.000</p>
+            <div class="menu-item">
+                <a href="https://i.pinimg.com/564x/99/4d/ea/994deae04f1c97c38a4ef442490d3c66.jpg" data-lightbox="menu" data-title="Sandwich">
+                    <img src="https://i.pinimg.com/564x/99/4d/ea/994deae04f1c97c38a4ef442490d3c66.jpg" alt="Menu 3">
+                </a>
             </div>
         </div>
     </div>
 
-    <!-- Footer -->
-    <div class="footer">
-        <p>&copy; 2024 Cafe Cozy - Semua Hak Dilindungi</p>
-    </div>
+    <!-- Lightbox Close Button -->
+    <button id="lightbox-close" class="lb-close" onclick="closeLightbox()" style="display:none;">&times;</button>
+
+    <!-- Lightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script>
+        // Handle closing lightbox
+        function closeLightbox() {
+            document.querySelector('.lb-close').style.display = 'none';
+            lightbox.end(); // Close Lightbox
+        }
+
+        // Show Close Button when Lightbox is Open
+        document.addEventListener('lightbox-start', function () {
+            document.querySelector('.lb-close').style.display = 'block';
+        });
+    </script>
 </body>
 </html>
